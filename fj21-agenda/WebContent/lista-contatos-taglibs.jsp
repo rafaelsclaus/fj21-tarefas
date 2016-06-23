@@ -8,9 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<c:import url="cabecalho.jsp"></c:import>
 	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao"></jsp:useBean>
 
-	<table bordercolor="black">
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Nome</th>
@@ -24,21 +26,18 @@
 			<c:forEach var="contato" items="${dao.lista}" varStatus="id">
 				<tr bgcolor="#${id.count % 2 == 0 ? 'aaee88' : 'ffffff' }">
 					<td>${contato.nome }</td>
-					
-					<td>
-						<c:if test="${not empty contato.email }">
+
+					<td><c:if test="${not empty contato.email }">
 							<a href="mailto:${contato.email}">${contato.email }</a>
-						</c:if>
-						
-						<c:if test="${empty contato.email }">
+						</c:if> <c:if test="${empty contato.email }">
 							Email nao informado.
-						</c:if>
-					</td>
+						</c:if></td>
 					<td>${contato.endereco }</td>
 					<td>${contato.dataNascimento.time }</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
+	<c:import url="rodape.jsp"></c:import>
 </body>
 </html>
