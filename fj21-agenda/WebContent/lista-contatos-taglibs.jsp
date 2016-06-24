@@ -10,8 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<c:import url="cabecalho.jsp"></c:import>
+	<c:url value="cabecalho.jsp" var="pag"/>
+	<c:import url="${pag}"/>
 	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao"></jsp:useBean>
 
 	<table border="1">
