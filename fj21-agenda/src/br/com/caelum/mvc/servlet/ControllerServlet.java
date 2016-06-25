@@ -20,9 +20,13 @@ public class ControllerServlet extends HttpServlet{
 		String nomeDaClasse = "br.com.caelum.mvc.logica." + parametro;
 		
 		try {
+			//Procura pela classe "Class.forName()" e coloca em um objeto generico "classe" de Classe
 			Class classe = Class.forName(nomeDaClasse);
 			
-			Logica logica = (Logica) classe.newInstance();
+			// instanciando a classe procurada
+			// Devolve um object e forca a conversao para Logica pq Logica tem o metodo executa 
+			Logica logica = (Logica) classe.newInstance(); 
+			// 
 			String pagina = logica.executa(request, response);
 			
 			request.getRequestDispatcher(pagina).forward(request, response);
