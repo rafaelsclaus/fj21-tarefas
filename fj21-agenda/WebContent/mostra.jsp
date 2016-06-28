@@ -17,8 +17,8 @@
 	<hr />
 
 	<form action="mvc" method="get">
-			  <input type="hidden" name="logica" value="AlteraContatoLogic"/>
-			  <input type="hidden" name="id" value="${contato.id }"/>
+ 			  <input type="hidden" name="logica" value="AlteraContatoLogic"/>  <!-- Variavel e valor para direcionar para classe-->
+			  <input type="hidden" name="id" value="${contato.id }"/>          <!-- Variavel e valor do primeiro parametro id -->
 			Nome: <input type="text" name="nome" value="${contato.nome }"/><br /> 
 			E-mail: <input type="text" name="email" value="${contato.email }"/><br /> 
 			Endereco: <input type="text" name="endereco" value="${contato.endereco }"/><br /> 
