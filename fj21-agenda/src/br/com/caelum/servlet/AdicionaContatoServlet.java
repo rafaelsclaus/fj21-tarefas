@@ -61,24 +61,5 @@ public class AdicionaContatoServlet extends HttpServlet {
 		
 		rd.forward(request, response);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
-
 }
