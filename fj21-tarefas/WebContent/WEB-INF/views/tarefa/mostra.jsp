@@ -8,7 +8,7 @@
 <title>Editar Tarefas</title>
 </head>
 <body>
-	<h3>Alterar Tarefa</h3>
+	<h3>Alterar Tarefa - ${tarefa.id} </h3>
 	<form action="alteraTarefa" method="post">
 
 		<input type="hidden" name="id" value="${tarefa.id}" /> Descricao: <br />
@@ -21,10 +21,9 @@
 					value="true" ${tarefa.finalizado? 'checked' : ''} /> <br />
 					
 		Data de finalizacão: <br />
-		<input type="text" name="dataFinalizacao"
-				value="<fmt:formatDate 
-						value="${tarefa.dataFinalizacao.time}"
-						pattern="dd/MM/yyyy" />" />			
+		
+		<fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy" var="data" />
+		<input type="text" name="dataFinalizacao" value="${data}" />			
 		
 		<br />
 		
