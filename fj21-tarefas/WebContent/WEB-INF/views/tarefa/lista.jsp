@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 <title>Insert title here</title>
+<link type="text/css" href="resources/css/tarefas.css" rel="stylesheet" />
 </head>
 <body>
 

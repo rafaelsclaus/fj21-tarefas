@@ -13,7 +13,8 @@ public class LoginController {
 	
 	
 	@RequestMapping("loginForm")
-	public String loginForm(){
+	public String loginForm(HttpSession session){
+		session.invalidate();
 		return "formulario-login";
 	}
 	
@@ -26,4 +27,9 @@ public class LoginController {
 		return "redirect:loginForm";
 	}
 	
+	@RequestMapping("logout")
+	public String logout(HttpSession session){
+		session.invalidate();
+		return "redirect:loginForm";
+	}
 }

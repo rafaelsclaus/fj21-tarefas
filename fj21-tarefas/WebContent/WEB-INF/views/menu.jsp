@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link type="text/css" href="resources/css/tarefas.css" rel="stylesheet" />
 </head>
 <body>
 	<h2>Pagina inicial da lista de tarefas</h2>
@@ -12,5 +13,7 @@
 	<p>Bem vindo, ${usuarioLogado.login}</p>
 	
 	<a href="listaTarefas">Clique aqui</a> para acessar a lista de tarefas.
+	
+	<a href="logout">Sair do sistema</a>
 </body>
 </html>
