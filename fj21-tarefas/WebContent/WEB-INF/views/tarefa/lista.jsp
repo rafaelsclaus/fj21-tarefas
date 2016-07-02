@@ -34,9 +34,12 @@
 			<th>Descricão</th>
 			<th>Finalizado ?</th>
 			<th>Data de Finalizacao</th>
+			<th>Remover</th>
+			<th>Alterar</th>
 		</tr>
 	
 		<c:forEach items="${tarefas}" var="tarefa">
+		
 			<tr id="tarefa_${tarefa.id}">
 				<td>${tarefa.id}</td>
 				<td>${tarefa.descricao}</td>
